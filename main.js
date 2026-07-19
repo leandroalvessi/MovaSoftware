@@ -80,22 +80,58 @@ function setSubject(productName) {
     }
 }
 
-// 6. Contact Form Submission (Mock)
-function handleContactSubmit(event) {
+// 6. Contact Form Submission (Web3Forms Email Integration)
+async function handleContactSubmit(event) {
     event.preventDefault();
     
     const form = document.getElementById('contact-form');
     const successMsg = document.getElementById('form-success');
-    
-    // Simulate API request delay
     const submitBtn = form.querySelector('button[type="submit"]');
+    
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const interest = document.getElementById('interest').value;
+    const message = document.getElementById('message').value;
+    
+    // Chave de acesso do Web3Forms
+    const accessKey = "a9b6a3ff-71c9-4db4-9de8-5f19d4d5e13e"; 
+    
+    // Desabilita o botão e exibe carregamento
     const originalText = submitBtn.innerHTML;
     submitBtn.disabled = true;
     submitBtn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> Enviando...';
 
-    setTimeout(() => {
-        // Hide form and show success message
-        form.style.display = 'none';
-        successMsg.style.display = 'block';
-    }, 1200);
+    try {
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            },
+            body: JSON.stringify({
+                access_key: accessKey,
+                name: name,
+                phone: phone,
+                interest: interest,
+                message: message,
+                subject: `Novo Lead do Site - ${name}`
+            })
+        });
+
+        const result = await response.json();
+        
+        if (result.success) {
+            form.style.display = 'none';
+            successMsg.style.display = 'block';
+        } else {
+            alert("Houve um erro ao enviar. Por favor, tente novamente.");
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalText;
+        }
+    } catch (error) {
+        console.error("Erro de envio:", error);
+        alert("Erro de conexão. Por favor, verifique sua internet e tente novamente.");
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalText;
+    }
 }
