@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://movasoftware.com.br/sitemap.xml
