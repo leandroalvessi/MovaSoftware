@@ -70,6 +70,12 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // 4.5. Dynamic Copyright Year
+    const yearSpan = document.getElementById('current-year');
+    if (yearSpan) {
+        yearSpan.innerText = new Date().getFullYear();
+    }
 });
 
 // 5. Inject Product Choice into Form
