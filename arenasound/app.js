@@ -30,7 +30,7 @@ function findAsset(assets, platform) {
   return assets.find((asset) => matchers.some((matcher) => matcher.test(asset.name)));
 }
 
-function setCardLink(card, asset, releasePageUrl, tagName) {
+function setCardLink(card, asset, releasePageUrl) {
   const subtitleNode = card.querySelector('.dl-ext');
   const buttonNode = card.querySelector('.dl-btn');
 
@@ -39,20 +39,7 @@ function setCardLink(card, asset, releasePageUrl, tagName) {
   if (asset) {
     card.href = asset.browser_download_url;
     card.title = `Baixar ${asset.name}`;
-    
-    // Formata o subtítulo de forma amigável ao invés do nome bruto do arquivo
-    const platform = card.dataset.platform;
-    const versionSuffix = tagName ? ` (${tagName})` : '';
-    if (platform === 'windows') {
-      subtitleNode.textContent = `Instalador .exe${versionSuffix}`;
-    } else if (platform === 'mac') {
-      subtitleNode.textContent = `Imagem .dmg${versionSuffix}`;
-    } else if (platform === 'linux') {
-      subtitleNode.textContent = `AppImage${versionSuffix}`;
-    } else {
-      subtitleNode.textContent = asset.name;
-    }
-    
+    subtitleNode.textContent = asset.name;
     buttonNode.textContent = 'Baixar agora';
     return;
   }
@@ -86,11 +73,10 @@ async function loadRelease() {
     const release = await response.json();
     const assets = Array.isArray(release.assets) ? release.assets : [];
     const releasePageUrl = release.html_url || latestReleaseUrl;
-    const tagName = release.tag_name || '';
 
     for (const card of downloadCards) {
       const asset = findAsset(assets, card.dataset.platform);
-      setCardLink(card, asset, releasePageUrl, tagName);
+      setCardLink(card, asset, releasePageUrl);
     }
   } catch (error) {
     for (const card of downloadCards) {
