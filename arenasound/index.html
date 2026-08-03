@@ -1,93 +1,318 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Arena Sound — Download</title>
-<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Black+Han+Sans&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
-<link rel="stylesheet" href="styles.css"/>
-<link rel="icon" type="image/png" href="../assets/favicon.png">
-<link rel="shortcut icon" href="../assets/favicon.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arena Sound | Software de Sonoplastia | Mova Software</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Conheça o Arena Sound, software profissional para sonoplastia desenvolvido pela Mova Software. Ideal para rodeios, eventos, motocross e apresentações.">
+    <meta name="keywords" content="arena sound, sonoplastia, software de áudio, mova software, eventos, rodeio, djs">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://movasoftware.com.br/arenasound">
+    <link rel="icon" type="image/png" href="../assets/favicon.png">
+    <link rel="shortcut icon" href="../assets/favicon.png" type="image/x-icon">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://movasoftware.com.br/arenasound">
+    <meta property="og:title" content="Arena Sound | Software de Sonoplastia | Mova Software">
+    <meta property="og:description" content="Software profissional para sonoplastia de rodeios, eventos, motocross, igrejas e apresentações ao vivo.">
+    <meta property="og:image" content="https://movasoftware.com.br/assets/arenasound_mockup.webp">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://movasoftware.com.br/arenasound">
+    <meta property="twitter:title" content="Arena Sound | Software de Sonoplastia | Mova Software">
+    <meta property="twitter:description" content="Software profissional para sonoplastia de rodeios, eventos, motocross, igrejas e apresentações ao vivo.">
+    <meta property="twitter:image" content="https://movasoftware.com.br/assets/arenasound_mockup.webp">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Premium Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .breadcrumb {
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            color: var(--color-text-muted);
+        }
+        .breadcrumb a {
+            color: var(--color-text-primary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .breadcrumb a:hover {
+            color: var(--color-primary);
+        }
+        .breadcrumb span {
+            color: var(--color-primary);
+            font-weight: 500;
+        }
+        
+        .dl-card {
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            color: inherit;
+            text-align: center;
+            border-radius: 12px;
+            padding: 2rem;
+            background: var(--bg-dark-card);
+            border: 1px solid var(--border-color);
+            transition: var(--transition-smooth);
+        }
+        .dl-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--color-primary);
+            box-shadow: 0 10px 25px var(--color-primary-glow);
+        }
+        .dl-card .icon-box {
+            width: 70px;
+            height: 70px;
+            border-radius: 12px;
+            background: rgba(139, 92, 246, 0.1);
+            color: var(--color-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.2rem;
+            margin: 0 auto 1.5rem;
+            transition: var(--transition-fast);
+        }
+        .dl-card:hover .icon-box {
+            background: var(--color-primary);
+            color: #fff;
+        }
+        .dl-card h3 {
+            margin-bottom: 0.5rem;
+            font-family: var(--font-heading);
+        }
+        .dl-card .dl-ext {
+            margin-bottom: 1.5rem;
+            color: var(--color-text-secondary);
+            font-size: 0.95rem;
+        }
+        .dl-card .dl-btn {
+            margin-top: auto;
+        }
+    </style>
 </head>
 <body>
 
-<div class="bg"></div>
-<div class="grid"></div>
+    <!-- Navigation -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="../index.html" class="logo">
+                <span class="logo-icon"><i class="fa-solid fa-cubes-stacked"></i></span>
+                Mova<span class="gradient-text">Software</span>
+            </a>
+            <nav class="nav-menu" id="nav-menu">
+                <a href="../index.html#inicio" class="nav-link">Início</a>
+                <a href="../index.html#sobre" class="nav-link">Sobre</a>
+                <a href="../index.html#produtos" class="nav-link">Produtos</a>
+                <a href="#contato" class="nav-link btn-nav">Fale Conosco</a>
+            </nav>
+            
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
 
-<div class="container">
+    <main>
+        <!-- Hero & Download Section -->
+        <section id="inicio" class="hero" style="min-height: auto; padding-top: 90px; padding-bottom: 50px;">
+            <!-- Background Decorative Elements -->
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+            <div class="blob blob-3"></div>
+            <div class="container">
+                <div class="text-center" style="max-width: 800px; margin: 0 auto; text-align: center;">
+                    <div class="breadcrumb fade-in" style="justify-content: center; display: flex; gap: 0.5rem;">
+                        <a href="../index.html">Home</a> &gt; <a href="../index.html#produtos">Produtos</a> &gt; <span>Arena Sound</span>
+                    </div>
+                    <span class="badge fade-in-delay-1" style="margin: 0 auto 1.5rem;">Software de Sonoplastia</span>
+                    <h1 class="fade-in-delay-1" style="font-size: 3.5rem; margin-bottom: 1rem;">Arena<span class="highlight-gold">Sound</span></h1>
+                    <p class="fade-in-delay-2" style="font-size: 1.25rem; margin-bottom: 0.5rem;">O som que transforma o evento.</p>
+                    <p class="fade-in-delay-2" style="font-size: 1.1rem; color: var(--color-text-muted); margin-bottom: 3rem;">Baixe agora e experimente grátis. Um produto desenvolvido pela Mova Software.</p>
+                </div>
 
-  <div class="logo">
-    <span class="logo-a">ARENA</span>
-    <span class="logo-b">SOUND</span>
-  </div>
-  <div class="logo-sub">Sistema Profissional para Eventos</div>
+                <div class="about-grid fade-in-delay-3" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 1000px; margin: 0 auto;">
+                    <a class="dl-card scroll-reveal" data-platform="windows" href="https://github.com/leandroalvessi/ArenaSoundRelease/releases/latest/download/ArenaSoundSetup.exe">
+                        <div class="icon-box"><i class="fa-brands fa-windows"></i></div>
+                        <h3>Windows</h3>
+                        <p class="dl-ext">Instalador .exe</p>
+                        <span class="btn btn-primary dl-btn">Baixar agora</span>
+                    </a>
+                    
+                    <a class="dl-card scroll-reveal" data-platform="mac" href="https://github.com/leandroalvessi/ArenaSoundRelease/releases/latest/download/ArenaSound.dmg">
+                        <div class="icon-box"><i class="fa-brands fa-apple"></i></div>
+                        <h3>macOS</h3>
+                        <p class="dl-ext">Imagem .dmg</p>
+                        <span class="btn btn-primary dl-btn">Baixar agora</span>
+                    </a>
+                    
+                    <a class="dl-card scroll-reveal" data-platform="linux" href="https://github.com/leandroalvessi/ArenaSoundRelease/releases/latest/download/ArenaSound.AppImage">
+                        <div class="icon-box"><i class="fa-brands fa-linux"></i></div>
+                        <h3>Linux</h3>
+                        <p class="dl-ext">AppImage</p>
+                        <span class="btn btn-primary dl-btn">Baixar agora</span>
+                    </a>
+                </div>
+            </div>
+        </section>
 
-  <div class="tagline">
-    O som que <span>transforma</span> o evento.<br>
-    Baixe agora e experimente grátis.
-  </div>
+        <!-- Recursos Section -->
+        <section id="recursos" class="about section-padding" style="background-color: var(--bg-alt); margin-top: 2rem;">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="subtitle">Recursos Principais</span>
+                    <h2>Tudo o que você precisa para seu evento</h2>
+                    <p class="section-desc">Licença única ou plano com mensalidade. Suporte dedicado garantido.</p>
+                </div>
+                
+                <div class="about-grid">
+                    <div class="about-card scroll-reveal">
+                        <div class="icon-box"><i class="fa-solid fa-music"></i></div>
+                        <h3>Playlists Ilimitadas</h3>
+                        <p>Organize suas faixas e crie playlists infinitas para qualquer momento do seu evento, com carregamento rápido.</p>
+                    </div>
+                    <div class="about-card scroll-reveal">
+                        <div class="icon-box"><i class="fa-solid fa-sliders"></i></div>
+                        <h3>Mixer Profissional</h3>
+                        <p>Controle preciso de volumes, ganho e canais de áudio com um mixer integrado poderoso e intuitivo.</p>
+                    </div>
+                    <div class="about-card scroll-reveal">
+                        <div class="icon-box"><i class="fa-solid fa-bolt"></i></div>
+                        <h3>Fade Out e Fade In</h3>
+                        <p>Transições suaves entre faixas para manter a energia do evento sem cortes bruscos no áudio.</p>
+                    </div>
+                    <div class="about-card scroll-reveal">
+                        <div class="icon-box"><i class="fa-solid fa-headphones"></i></div>
+                        <h3>Pré-escuta</h3>
+                        <p>Monitore suas faixas antes de tocá-las para o público em um canal independente, garantindo a entrada perfeita.</p>
+                    </div>
+                    <div class="about-card scroll-reveal">
+                        <div class="icon-box"><i class="fa-solid fa-lock"></i></div>
+                        <h3>Licença Offline</h3>
+                        <p>Trabalhe em eventos remotos sem se preocupar com conexão de internet constante para validação de licença.</p>
+                    </div>
+                    <div class="about-card scroll-reveal">
+                        <div class="icon-box"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                        <h3>Efeitos ao Vivo</h3>
+                        <p>Adicione efeitos dinâmicos em tempo real, jingles e vinhetas com botões de acesso rápido.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <div class="download-grid">
+        <!-- Contact Section -->
+        <section id="contato" class="contact section-padding">
+            <div class="container">
+                <div class="contact-box scroll-reveal">
+                    <div class="contact-info-panel">
+                        <h2>Fale Conosco</h2>
+                        <p>Quer saber mais sobre nossos produtos ou tirar dúvidas sobre o Arena Sound? Preencha o formulário e nossa equipe entrará em contato.</p>
+                        
+                        <div class="contact-details">
+                            <div class="contact-detail-item">
+                                <span class="icon"><i class="fa-solid fa-location-dot"></i></span>
+                                <div>
+                                    <h4>Localização</h4>
+                                    <p>Goiânia, GO - Brasil</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-panel">
+                        <form id="contact-form" onsubmit="handleContactSubmit(event)">
+                            <div class="form-group">
+                                <label for="name">Nome Completo</label>
+                                <input type="text" id="name" required placeholder="Digite seu nome">
+                            </div>
+                            <div class="form-group">
+                                 <label for="phone">WhatsApp / Telefone</label>
+                                 <input type="tel" id="phone" required placeholder="(DD) 99999-9999">
+                            </div>
+                            <div class="form-group">
+                                <label for="interest">Produto de Interesse</label>
+                                <select id="interest" required>
+                                    <option value="ArenaSound" selected>ArenaSound (Sonorização Profissional)</option>
+                                    <option value="nextroute">nextroute (Otimizador de Rotas)</option>
+                                    <option value="SobMedida">Software sob Medida / Outro</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Mensagem</label>
+                                <textarea id="message" rows="4" required placeholder="Como podemos ajudar?"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Enviar Mensagem <i class="fa-solid fa-paper-plane"></i></button>
+                        </form>
+                        <div id="form-success" class="form-success-msg" style="display: none;">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <h3>Mensagem enviada com sucesso!</h3>
+                            <p>Agradecemos o contato. Responderemos o mais breve possível.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    <a class="dl-card" data-platform="windows" href="https://github.com/leandroalvessi/ArenaSoundRelease/releases/latest/download/ArenaSoundSetup.exe">
-      <div class="dl-icon" aria-hidden="true"><i class="fa-brands fa-windows"></i></div>
-      <div class="dl-os">Windows</div>
-      <div class="dl-ext">Instalador .exe</div>
-      <div class="dl-btn">Baixar</div>
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo">
+                    <span class="logo-icon"><i class="fa-solid fa-cubes-stacked"></i></span>
+                    Mova<span class="gradient-text">Software</span>
+                </a>
+                <p>Criando soluções que movem a inovação.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Links Rápidos</h4>
+                <a href="../index.html#inicio">Início</a>
+                <a href="../index.html#sobre">Sobre</a>
+                <a href="../index.html#produtos">Produtos</a>
+                <a href="#contato">Contato</a>
+            </div>
+            <div class="footer-social">
+                <h4>Siga-nos</h4>
+                <a href="https://www.instagram.com/movasoftware/" target="_blank" rel="noopener noreferrer" class="instagram-badge">
+                    <i class="fa-brands fa-instagram"></i>
+                    <span>@movasoftware</span>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year">2026</span> Mova Software. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/5562998211684" target="_blank" rel="noopener noreferrer" class="whatsapp-btn" aria-label="Converse conosco no WhatsApp">
+        <div class="whatsapp-tooltip">
+            <span>Preciso de ajuda?</span>
+            <strong>Converse conosco</strong>
+        </div>
+        <div class="whatsapp-icon">
+            <i class="fa-brands fa-whatsapp"></i>
+        </div>
     </a>
 
-    <a class="dl-card" data-platform="mac" href="https://github.com/leandroalvessi/ArenaSoundRelease/releases/latest/download/ArenaSound.dmg">
-      <div class="dl-icon" aria-hidden="true"><i class="fa-brands fa-apple"></i></div>
-      <div class="dl-os">macOS</div>
-      <div class="dl-ext">Imagem .dmg</div>
-      <div class="dl-btn">Baixar</div>
-    </a>
-
-    <a class="dl-card" data-platform="linux" href="https://github.com/leandroalvessi/ArenaSoundRelease/releases/latest/download/ArenaSound.AppImage">
-      <div class="dl-icon" aria-hidden="true"><i class="fa-brands fa-linux"></i></div>
-      <div class="dl-os">Linux</div>
-      <div class="dl-ext">AppImage</div>
-      <div class="dl-btn">Baixar</div>
-    </a>
-
-  </div>
-
-  <div class="divider"></div>
-
-  <div class="features">
-    <div class="feat">
-      <div class="feat-icon">🎵</div>
-      <div class="feat-text">Playlists Ilimitadas</div>
-    </div>
-    <div class="feat">
-      <div class="feat-icon">🎚️</div>
-      <div class="feat-text">Mixer Profissional</div>
-    </div>
-    <div class="feat">
-      <div class="feat-icon">⚡</div>
-      <div class="feat-text">Fade Out e Fade In</div>
-    </div>
-    <div class="feat">
-      <div class="feat-icon">🎤</div>
-      <div class="feat-text">Pré-escuta</div>
-    </div>
-    <div class="feat">
-      <div class="feat-icon">🔐</div>
-      <div class="feat-text">Licença Offline</div>
-    </div>
-    <div class="feat">
-      <div class="feat-icon">🎛️</div>
-      <div class="feat-text">Efeitos ao Vivo</div>
-    </div>
-  </div>
-
-  <div class="footer">
-    Sempre grátis para testar · Licença única ou plano com mensalidade · Suporte dedicado
-  </div>
-
-</div>
-
-<script src="app.js"></script>
+    <!-- JavaScript -->
+    <script src="../main.js"></script>
+    <script src="app.js?v=2"></script>
 </body>
 </html>
