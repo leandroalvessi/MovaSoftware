@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImóvelCerto | Encontre seu novo lar</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Phosphor Icons (for elegant icons) -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="#" class="logo">
+                <i class="ph-fill ph-house-line"></i>
+                Imóvel<span>Certo</span>
+            </a>
+            <nav class="desktop-nav">
+                <a href="#destaques">Imóveis</a>
+                <a href="#sobre">Sobre Nós</a>
+                <a href="#contato" class="btn-primary">Fale Conosco</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Property Listings -->
+    <section class="properties-section container" id="destaques">
+        
+        <div class="search-bar standalone-search">
+            <div class="search-tabs">
+                <button class="tab active" data-type="todos">Todos</button>
+                <button class="tab" data-type="venda">Comprar</button>
+                <button class="tab" data-type="aluguel">Alugar</button>
+            </div>
+            <div class="search-input-group">
+                <i class="ph ph-magnifying-glass"></i>
+                <input type="text" id="search-input" placeholder="Busque por cidade, bairro ou tipo de imóvel...">
+                <button class="btn-search">Buscar</button>
+            </div>
+        </div>
+
+        <div class="section-header">
+            <h2>Imóveis em Destaque</h2>
+            <p>Selecionamos as melhores oportunidades do mercado para você.</p>
+        </div>
+
+        <div id="properties-grid" class="properties-grid">
+            <!-- Populated by JS -->
+        </div>
+        
+        <div id="no-results" class="no-results" style="display: none;">
+            <i class="ph ph-magnifying-glass-minus"></i>
+            <h3>Nenhum imóvel encontrado</h3>
+            <p>Tente buscar com outros termos ou altere a categoria.</p>
+        </div>
+    </section>
+
+    <!-- Benefits / About -->
+    <section class="benefits bg-light" id="sobre">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Por que escolher a ImóvelCerto?</h2>
+                <p>Nós facilitamos o processo de achar o imóvel ideal.</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="icon-box"><i class="ph ph-shield-check"></i></div>
+                    <h3>Compra Segura</h3>
+                    <p>Documentação garantida e processos transparentes do início ao fim.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="icon-box"><i class="ph ph-star"></i></div>
+                    <h3>Imóveis Selecionados</h3>
+                    <p>Curadoria rigorosa para garantir alto padrão e melhor custo-benefício.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="icon-box"><i class="ph ph-headset"></i></div>
+                    <h3>Atendimento Premium</h3>
+                    <p>Nossos corretores acompanham você de perto em cada etapa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contato">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo footer-logo">
+                    <i class="ph-fill ph-house-line"></i>
+                    Imóvel<span>Certo</span>
+                </a>
+                <p>Transformando sonhos em endereços.</p>
+                <div class="social-links">
+                    <a href="#"><i class="ph ph-instagram-logo"></i></a>
+                    <a href="#"><i class="ph ph-facebook-logo"></i></a>
+                    <a href="#"><i class="ph ph-whatsapp-logo"></i></a>
+                </div>
+            </div>
+            <div class="footer-contact">
+                <h3>Fale Conosco</h3>
+                <p><i class="ph ph-map-pin"></i> Av. Paulista, 1000 - São Paulo, SP</p>
+                <p><i class="ph ph-envelope-simple"></i> contato@imovelcerto.com.br</p>
+                <p><i class="ph ph-phone"></i> (11) 99999-9999</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year"></span> ImóvelCerto. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Property Detail Modal -->
+    <div id="property-modal" class="modal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+            <button class="close-btn" id="close-modal"><i class="ph ph-x"></i></button>
+            <div class="modal-grid">
+                <div class="modal-gallery">
+                    <div class="main-image-container">
+                        <img id="modal-main-img" src="" alt="Foto do Imóvel">
+                        <button class="nav-btn prev-btn" id="prev-img"><i class="ph ph-caret-left"></i></button>
+                        <button class="nav-btn next-btn" id="next-img"><i class="ph ph-caret-right"></i></button>
+                    </div>
+                    <div class="thumbnail-list" id="thumbnail-list">
+                        <!-- Thumbs by JS -->
+                    </div>
+                </div>
+                <div class="modal-info">
+                    <div class="modal-header">
+                        <span class="badge" id="modal-type">Venda</span>
+                        <h2 id="modal-title">Título do Imóvel</h2>
+                        <p class="location" id="modal-location"><i class="ph ph-map-pin"></i> Endereço do Imóvel</p>
+                    </div>
+                    
+                    <div class="price-box">
+                        <p class="price-label">Valor</p>
+                        <h3 id="modal-price">R$ 0,00</h3>
+                    </div>
+
+                    <div class="property-features" id="modal-features">
+                        <!-- Added by JS -->
+                    </div>
+
+                    <div class="description">
+                        <h3>Sobre o Imóvel</h3>
+                        <p id="modal-description">Descrição...</p>
+                    </div>
+
+                    <div class="action-box">
+                        <a href="#" id="whatsapp-btn" class="btn-whatsapp" target="_blank">
+                            <i class="ph ph-whatsapp-logo"></i> Falar com Corretor
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
