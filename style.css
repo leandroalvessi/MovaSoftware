@@ -501,6 +501,18 @@ body {
     border-color: rgba(6, 182, 212, 0.2);
 }
 
+.tag-blue {
+    background: rgba(37, 99, 235, 0.1);
+    color: #3b82f6;
+    border-color: rgba(37, 99, 235, 0.2);
+}
+
+.tag-gold {
+    background: rgba(245, 200, 66, 0.1);
+    color: #f5c842;
+    border-color: rgba(245, 200, 66, 0.2);
+}
+
 .product-title {
     font-family: var(--font-heading);
     font-size: 2.8rem;
@@ -508,8 +520,12 @@ body {
     margin-bottom: 20px;
 }
 
+.font-donnie { font-family: 'Playfair Display', 'Outfit', serif; letter-spacing: 0.5px; display: inline-block; padding-bottom: 12px; border-bottom: 2px solid rgba(255, 255, 255, 0.4); }
+
 .highlight-violet { color: var(--color-primary); }
 .highlight-cyan { color: var(--color-secondary); }
+.highlight-blue { color: #3b82f6; }
+.highlight-black { color: var(--color-text-primary); }
 
 .product-description {
     color: var(--color-text-secondary);
@@ -571,6 +587,14 @@ body {
 
 .glowing-effect.cyan {
     background: radial-gradient(circle, var(--color-secondary) 0%, transparent 60%);
+}
+
+.glowing-effect.blue {
+    background: radial-gradient(circle, #3b82f6 0%, transparent 60%);
+}
+
+.glowing-effect.gold {
+    background: radial-gradient(circle, #f5c842 0%, transparent 60%);
 }
 
 /* Contact Section */
